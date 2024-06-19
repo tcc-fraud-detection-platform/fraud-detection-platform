@@ -1,0 +1,16 @@
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+<app-error-alert [errorMessage]="error"></app-error-alert>
+<!-- Caixa de diÃ¡logo de texto -->
+<div class="screen">
+  <div class="main-card">
+    <h2>Análise de Texto</h2>
+    <div *ngIf="showTextInputDialog" class="text-input-dialog">
+      <textarea [(ngModel)]="inputText" class="form-control mt-2" placeholder="Escreva seu texto" rows="10" cols="50"></textarea>
+      <button class="btn btn-primary mt-2" type="button" (click)="saveTextAsFile()">Enviar para análise</button>
+      <button class="btn btn-primary mt-2" type="button" (click)="clearTextInputDialog()">Limpar</button>
+      </div>
+    <div *ngFor="let item of data">
+      <p>Result: Este texto tem {{ item.score | percentage}} chance de ser {{ item.result === 1 ?'Verdadeiro' : 'Falso' }} </p>    
+    </div>
+  </div>
+</div>

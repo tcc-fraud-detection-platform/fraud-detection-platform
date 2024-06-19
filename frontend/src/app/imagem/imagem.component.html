@@ -1,0 +1,24 @@
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+<app-error-alert [errorMessage]="error"></app-error-alert>
+
+<div class="screen">
+    <div class="main-card">
+        <h2>Análise de Imagem</h2>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <input class="form-control" style="width: 60%;" type="file" accept=".png, .jpg, .jpeg" (change)="onFileSelected($event)" />
+        </div>
+        <div *ngIf="selectedFile" class="content-card">
+            <div class="image-container">
+                <img [src]="imgPreview" style="height: 100%;" [alt]="selectedFile.name" />
+            </div>
+            <div class="mt-2">
+                <button class="btn btn-primary" style="margin-left: 10px;" type="button" (click)="onUpload()">Enviar para Análise</button>
+                <button class="btn btn-primary" style="margin-left: 10px;" type="button" (click)="limpar()">Limpar</button>
+            </div>
+        </div>
+    
+        <div *ngFor="let item of data">
+            <p>Result: Esta imagem tem {{ item.score | percentage}} chance de ser {{ item.result === 1 ?'Verdadeiro' : 'Falso' }} </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+<app-error-alert [errorMessage]="error"></app-error-alert>
+
+<app-loading-spinner [isLoading]="isLoading"></app-loading-spinner>
+
+<div class="screen">
+
+
+  <div class="main-card">
+    <h2>Análise de Áudio</h2>
+
+    <!-- File input for selecting audio files -->
+    <div style="display: flex; justify-content: center; margin-top: 20px; width: 100%;">
+      <input class="form-control" style="width: 60%;" type="file" (change)="onFileSelected($event)" accept=".wav" />
+    </div>
+
+    <!-- Audio player and upload button, shown if a file is selected -->
+    <div *ngIf="selectedFile" class="content-card">
+      <audio controls class="mt-2 w-100">
+        <source [src]="audioURL" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="d-flex mt-2">
+        <button class="btn btn-primary me-2" type="button" (click)="onUpload()">
+          Enviar para Análise
+        </button>
+        <button class="btn btn-primary" type="button" (click)="onClear()">
+          Limpar
+        </button>
+      </div>
+    </div>
+
+    <!-- Displaying results from data array -->
+    <div *ngFor="let item of data">
+      <p>Result: Este audio tem {{ item.score | percentage}} chance de ser {{ item.result === 1 ?'Verdadeiro' : 'Falso'
+        }} </p>
+    </div>
+  </div>
+</div>

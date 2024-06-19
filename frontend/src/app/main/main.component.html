@@ -1,0 +1,62 @@
+<div id="myCarousel" class="carousel slide mb-6 p-0" data-bs-ride="carousel">
+  <div class="carousel-inner p-0">
+    <div class="carousel-item p-0">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      </svg>
+      <div class="container p-0">
+        <div class="carousel-caption text-start">
+          <h1>Example headline.</h1>
+          <p class="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item active p-0">
+      <svg class="bd-placeholder-img p-0" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+        <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+      </svg>
+      <div class="container">
+        <div class="carousel-caption p-0">
+          <h1>Software para Detecção de Fraudes</h1>
+          <p>Proteja sua organização com nossa solução de ponta para detecção de fraudes em áudio, imagem e texto.</p>
+          <p><a class="btn btn-lg btn-primary" href="https://github.com/tcc-fraud-detection-platform/fraud-detection-platform" target="_blank" rel="noopener">Ler mais</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="container">
+    <div class="services-section">
+      <div class="service">
+        <div class="icon-circle">
+          <i class="fas fa-microphone"></i>
+        </div>
+        <h3>Detecção de Fraude em Áudio</h3>
+        <p>Analise arquivos de áudio para identificar possíveis fraudes e inconsistências.</p>
+        <a href="/audio" class="btn btn-custom">Analisar Áudio</a>
+      </div>
+      <div class="service">
+        <div class="icon-circle">
+          <i class="fas fa-image"></i>
+        </div>
+        <h3>Detecção de Fraude em Imagem</h3>
+        <p>Análise de maneira ágil imagens para detectar modificações e alterações.</p>
+        <a href="/imagem" class="btn btn-custom">Analisar Imagem</a>
+      </div>
+      <div class="service">
+        <div class="icon-circle">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <h3>Detecção de Fraude em Texto</h3>
+        <p>Avalie a autenticidade das notícias a fim de evitar a propagação de informações
+          enganosas.</p>
+        <a href="/fakenews" class="btn btn-custom">Analisar Texto</a>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

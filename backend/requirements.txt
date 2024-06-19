@@ -1,0 +1,4 @@
+psycopg2==2.9.9
+Flask==3.0.3
+flask_cors==4.0.1
+python-decouple==3.8

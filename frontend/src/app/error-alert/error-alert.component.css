@@ -1,0 +1,5 @@
+.alert {
+    z-index: 1050; /* Colocar o alerta acima de outros elementos */
+    width: 50%; /* Ajuste a largura conforme necessário */
+    margin-top: 20px; /* Espaçamento do topo */
+  }

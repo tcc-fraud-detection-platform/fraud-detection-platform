@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Platform for Fraud Detection</title>
+    <script>
+        function showAlert(message) {
+            alert(message);
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <h1>Unified Platform for Fraud Detection</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="showAlert('File uploaded and Docker image {{ docker_image_name }} triggered!')">
+        <label for="file">Choose a file: 2</label>
+        <input type="file" name="file" id="file" accept=".xlsx, .pdf, .png, .jpeg">
+        <br>
+        <br>
+        <h2>Choose the method for your file</h2>
+        <button type="submit" name="docker_image" value="image_fraud">image_fraud</button>
+        <button type="submit" name="docker_image" value="audio_fraud">audio_fraud</button>
+        <button type="submit" name="docker_image" value="fake_news_analysis">fake_news_analysis</button>
+    </form>
+</body>
+</html>

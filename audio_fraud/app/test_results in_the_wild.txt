@@ -1,0 +1,7 @@
+Acurácia: 67.87%
+Precision: 0.58
+Recall: 0.51
+F1-score: 0.54
+Tempo de execução: 15255.71 segundos
+correct_predictions: 21567
+total_files: 31779
