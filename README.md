@@ -48,29 +48,6 @@ A plataforma SaaS foi projetada para operar por meio de diversos módulos indepe
 - Tratamento de imagens com técnicas como desfoque Gaussiano e detecção de bordas
 - Treinamento do modelo com dados otimizados
 
-## Resultados
-
-### Análise de Fake News
-- Alta precisão na identificação correta de notícias verdadeiras e falsas
-- Equilíbrio entre precisão e recall
-- Alto F1 Score
-
-### Análise de Áudio
-- Resultados de testes em conjuntos de dados 'Fake or Real' e 'In the Wild'
-- Acurácia inferior para 'In the Wild' devido a características distintas dos áudios
-
-### Detecção de Imagens Falsas
-- Avaliação quantitativa e qualitativa do desempenho do modelo
-- Necessidade de melhorias contínuas para aumentar a precisão
-
-## Conclusões
-
-- Geração de relatórios
-- Adoção por outras plataformas
-- Desafios na integração dos módulos
-- Inclusão constante de novos dados
-- Refinamentos contínuos para resultados mais precisos e confiáveis
-
 ## Referências Bibliográficas
 
 - ASLAM, F. The benefits and challenges of customization within saas cloud solutions. American Journal of Data, Information and Knowledge Management, 2023.
