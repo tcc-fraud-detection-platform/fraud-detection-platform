@@ -38,7 +38,7 @@ def upload_file_audio():
     file_data = file.read()
 
     # Insert file into PostgreSQL
-    cur.execute("INSERT INTO tcc_2 (comment,ai_flow, file) VALUES (%s,%s,%s)", (file.filename,module_name, file_data))
+    cur.execute("INSERT INTO tcc_2 (file_name,ai_flow, file) VALUES (%s,%s,%s)", (file.filename,module_name, file_data))
 
     conn.commit()
     cur.close()
